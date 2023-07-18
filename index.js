@@ -19,6 +19,6 @@ app.use('/admin' , admin_routes)
 
 
 
-app.listen(5000 , ()=>{
+app.listen(3000 , ()=>{
     console.log('server is running')
 })
