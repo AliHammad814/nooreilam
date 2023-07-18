@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="css/dashbg.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Dashboard</title>
+</head>
+
+<body>
+    <a class="backhome fixed-top" href="/admin">Home</a>
+    <div class="color color-1"></div>
+    <div class="color color-2"></div>
+    <div class="container fullbox">
+        <div class="row">
+            <div class="col-12">
+                <h1 id="mainheading">Header</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <form action="headerblogdata" method="post">
+                    <label for="mainheading">Heading</label>
+                    <input type="text" name="mainheading"
+                        value=" it is the avid duty of all adult Muslims to make sure to get Islamic education!"><br><br>
+                    <input type="submit" value="UpDate">
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container fullbox">
+        <div class="row">
+            <div class="col-12">
+                <h1 id="mainheading">No 2 Section</h1>
+            </div>
+        </div>
+        <div id="no2" class="row">
+            <div class="col-12">
+                <form action="section2" method="post">
+                    <label for="heading">Heading</label>
+                    <input type="text" name="heading" id="heading"><br><br>
+                    <label for="paragraph">Paragraph</label>
+                    <input type="text" name="paragraph" id="paragraph"><br><br>
+                    <input type="submit" value="Update">
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- &&&&&&&&&&&&&&&&&&&&  blog &&&&&&&&&&&&&&&&&&&&&&7 -->
+
+    <div class="container fullbox">
+        <div class="row">
+            <div class="col-12">
+                <h1 id="mainheading">
+                    Blogs
+                </h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <form action="blogblogdata" method="post" enctype="multipart/form-data">
+                    <label for="heading">Heading</label>
+                    <input type="text" name="heading" id="heading" required><br><br>
+                    <label for="paragraph">paragraph</label>
+                    <input type="text" name="paragraph" id="paragraph" required><br><br>
+                    <label for="image">Image</label>
+                    <input type="file" name="image" id="image" required><br><br>
+                    <input type="submit" value="Add New">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="blog" class="container blog mb-5">
+        <div class="row justify-content-around  w-100">
+            <%for(let i=0 ; i<blog.length ; i++) {%>
+            <div id="rlt" class="col-6">
+                <div class="image"><img src="image/<%= blog[i].image %> " alt="<%= blog[i].image %>"></div>
+                <div class="text">
+                    <a id="link" href="blogblogremove?id=<%=blog[i]._id%>">Remove</a>
+                    <a id="edit" href="blogedit?id=<%=blog[i]._id%>">Edit</a>
+                    <h1><%=blog[i].heading%></h1>
+                    <p><%=blog[i].paragraph%></p>
+                    <a class="" href="">Explore More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <%}%>
+        </div>
+    </div>
+
+    <div class="container fullbox">
+        <div class="row">
+            <div class="col-12">
+                <h1 id="mainheading">Contact Us Section</h1>
+            </div>
+        </div>
+        <div id="contact" class="row">
+            <div class="col-12">
+                <form action="blogregdata" method="post">
+                    <label for="heading">Heading</label>
+                    <input type="text" name="heading" id="heading"><br><br>
+                    <label for="btn">Button</label>
+                    <input type="text" name="btn" id="btn"><br><br>
+                    <label for="btnroute">Button Route</label>
+                    <input type="text" name="btnroute" id="btnroute"><br><br>
+                    <input type="submit" value="Update">
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

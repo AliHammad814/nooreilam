@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+table a{
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(255, 0, 0);
+}
+
+table tbody{
+    word-break: break-all;
+}

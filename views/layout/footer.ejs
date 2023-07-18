@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <link rel="stylesheet" href="css/home.css"> -->
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- %%%%%%%%%%%%%%%%%%%%%%%  <footer></footer> %%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+<footer class="footer-1 my-4 py-5">
+    <div class="container">
+        <div class="row d-flex justify-content-center align-content-center flex-wrap">
+            <div class="col-lg-3 box box-1 col-sm-8 d-flex align-content-center flex-column">
+                <div class="row">
+                    <div class="col-12">
+                        <h5><a href="./index.html">Noor-e-Ilam</a></h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <a>Easy to learn Quran for everyone</a>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-start">
+                    <%for(let i = 0 ; i<line1icon.length ; i++) {%>
+                        <div class="col-1 ms-2 "><a href="<%= line1icon[i].route %>"><i class=" <%= line1icon[i].icon %> "></i></a></i></div>
+                    <%}%>
+                </div>
+            </div>
+            <div class="col-lg-2 col-sm-4 box box-2">
+                <%for(let i = 0 ; i<line2.length ; i++) {%>
+                    <div class="row justify-content-center">
+                        <div class="col-12">
+                            <a href=" <%= line2[i].route %> "><%= line2[i].item %></a>
+                        </div>
+                    </div>
+                <%}%>
+            </div>
+            <div class="col-lg-4 col-sm-8 mt-lg-0 mt-sm-5m box box-3 align-content-end d-flex flex-column">
+                <%for(let i = 0 ; i<line3.length ; i++) {%>
+                    <div class="row justify-content-center">
+                        <div class="row">
+                            <div class="col-1">
+                                <a href="<%= line3[i].href %>"><i class="<%= line3[i].icon %>"></i></a>
+                            </div>
+                            <div class="col-10">
+                                <a href="<%= line3[i].href %>"><%=line3[i].heading%></a>
+                            </div>
+                        </div>
+                    </div>
+                <%}%>
+                <!-- <div class="row">
+                    <div class="col-1">
+                        <a href=""><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                    <div class="col-10">
+                        <a href="">info@norulilm.com</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-1">
+                       <a href=""> <i class="fa-solid fa-location-dot"></i></a>
+                    </div>
+                    <div class="col-10">
+                        <a href="">info@norulilm.com</a>
+                    </div>
+                </div> -->
+            </div>
+            <div class="col-lg-3 col-sm-4 ps-lg-5 mt-lg-0 mt-sm-5 box box-4">
+                <%for(let i = 0 ; i<line4.length ; i++) {%>
+                    <div class="row justify-content-center">
+                        <div class="col-12">
+                            <a href=" <%= line4[i].route %> "><%= line4[i].item %></a>
+                        </div>
+                    </div>
+                <%}%>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="footer-2 py-3 border-top text-center">
+    <div class="container">
+        <div class="row"><div class="col-12"><h6>@2023 All Rights Reserved</h6></div></div>
+    </div>
+</div>
+
+</body>
+</html>

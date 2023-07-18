@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+</head>
+<body>
+    <a class="backhome fixed-top" href="/admin">Home</a>
+    <div class="color color-1"></div>
+    <div class="color color-2"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 id="mainheading">Noor-e-Ilam Free Contact User </h1>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+            <div class="row mainrow">
+                <%for(let i=0 ; i<user.length ; i++) {%>
+                    <div id="rlt" class="col-6">
+                        <a id="link" href="contactformremove?id=<%= user[i]._id %>">Remove</a>
+                        <h1 class="mt-4">User Data</h1>
+                        <h2><span>Name:</span>
+                            <%= user[i].fullname %>
+                        </h2>
+                        <h2><span>Email:</span>
+                            <%= user[i].email %>
+                        </h2>
+                        <h2><span>Number:</span>
+                            <%= user[i].number %>
+                        </h2>
+                        <h2><span>Message:</span>
+                            <%= user[i].message %>
+                        </h2>
+                    </div>
+                    <%}%>
+            </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/adminlogin.css">
+    <title>Login Your Account</title>
+</head>
+<body>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+            <div class="container">
+                <div class="form">
+                    <div class="scr" style="--i:0;"></div>
+                    <div class="scr" style="--i:1;"></div>
+                    <div class="scr" style="--i:2;"></div>
+                    <div class="scr" style="--i:3;"></div>
+                    <div class="scr" style="--i:4;"></div>
+                    <% if(typeof message !=="undefined" ){ %>
+                        <p class="p">
+                            <%= message %>
+                        </p>
+                    <%}%>
+                    <h2>Admin Form</h2>
+                    <form action="adminupdate" method="post">
+                        <div class="inputbox">
+                        <input required type="email" name="email"  placeholder="Email">
+                        </div>   
+                        <div class="inputbox">
+                        <input required type="password" name="password" placeholder="Password">
+                        </div>
+                        <div class="inputbox">
+                            <input type="submit" class="btn" value="Login">
+                        </div>
+                    </form>
+                </div>
+            </div>
+</body>
+</html>

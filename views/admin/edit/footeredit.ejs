@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/dashbg.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+</head>
+
+<body>
+
+    <a class="backhome fixed-top" href="/admin/dashfooter">Home</a>
+    <div class="color color-1"></div>
+    <div class="color color-2"></div>
+    <% if(line1icond[0]){%>
+
+
+        <div class="container fullbox">
+            <div class="row">
+                <div class="col-12">
+                    <h1 id="mainheading">Line 1 Edit</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <form action="line1edit?id=<%= line1icond[0]._id  %>" method="post">
+                        <label for="icon">Icon Input</label>
+                        <input value="<%= line1icond[0].icon  %>" type="text" name="icon" id="icon"><br><br>
+                        <label for="route">Route</label>
+                        <input value="<%= line1icond[0].route  %>" type="text" name="route" id="route"><br><br>
+                        <input type="submit" value="Update">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <% }else{ if(line2d[0]){%>
+
+            <div class="container fullbox">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 id="mainheading">Line 2 Edit</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <form action="line2edit?id=<%= line2d[0]._id  %>" method="post">
+                            <label for="itemname">Item Name</label>
+                            <input type="text" value="<%= line2d[0].item  %>" name="itemname" id="itemname"><br><br>
+                            <label for="route">Route</label>
+                            <input value="<%= line2d[0].route  %>" type="text" name="route" id="route"><br><br>
+                            <input type="submit" value="Update">
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <% }else{ if(line3d[0]){%>
+
+                <div class="container fullbox">
+                    <div class="row">
+                        <div class="col-12">
+                            <h1 id="mainheading">Line 3 Edit</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <form action="line3edit?id=<%= line3d[0]._id  %>" method="post">
+                                <label for="icon">Icon Input</label>
+                                <input value="<%= line3d[0].icon  %>" type="text" name="icon" id="icon1"><br><br>
+                                <label for="heading">Item Name</label>
+                                <input value="<%= line3d[0].heading  %>" type="text" name="heading"
+                                    id="heading"><br><br>
+                                <label for="href">Href Value</label>
+                                <input value="<%= line3d[0].href  %>" type="text" name="href" id="href"><br><br>
+                                <input type="submit" value="Update">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <% }else{ %>
+
+                    <div class="container fullbox">
+                        <div class="row">
+                            <div class="col-12">
+                                <h1 id="mainheading">Line 4 Edit</h1>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <form action="line4edit?id=<%= line4d[0]._id  %>" method="post">
+                                    <label for="itemname">Item Name</label>
+                                    <input type="text" value="<%= line4d[0].item  %>"  name="itemname" id="itemname"><br><br>
+                                    <label for="route">Route</label>
+                                    <input value="<%= line4d[0].route %>" type="text" name="route" id="route"><br><br>
+                                    <input type="submit" value="Update">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <%} }}%>
+</body>
+
+</html>

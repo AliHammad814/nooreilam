@@ -1,0 +1,277 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: Syne;
+    /* overflow-x: hidden; */
+}
+
+
+/* &&&&&&&&&&&&&&&&&&& header &&&&&&&&&&&&&&&&&&&&&&&&7 */
+
+header {
+    background-image: url(../contactus/header.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* height: 500px; */
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3.7rem;
+    line-height: 30%;
+    text-transform: capitalize;
+    text-shadow: 0px 4.17592px 0px rgba(141, 108, 21, 0.23);
+    line-height: 130%;
+    word-spacing: 5px;
+    color: #252525;
+    margin-top: 80px;
+    max-width: 700px;
+
+}
+
+header .col-12 {
+    width: 80%;
+}
+
+/* @media (max-width:1025px){
+    header h1{
+        font-weight: 600;
+        font-size: 3rem;
+    }
+} */
+/* @media (max-width:955px){
+    header h1{
+        font-weight: 600;
+        font-size: 2.5rem;
+    }
+} */
+@media (max-width:770px) {
+    header h1 {
+        font-weight: 600;
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width:560px) {
+    header h1 {
+        font-weight: 600;
+        font-size: 1.8rem;
+    }
+}
+
+
+
+
+
+
+/* &&&&&&&&&&&&&&&&&&&&&&& teacher &&&&&&&&&&&&&&&&&&&&&&&&&& */
+
+.easytolearn h2 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 44px;
+}
+
+.easytolearn p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 26px;
+    width: 95%;
+    margin-top: 50px;
+    color: #222222;
+}
+
+.easytolearn {
+    padding: 100px 0;
+}
+
+@media (max-width : 770px) {
+    .easytolearn h2 {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 35px;
+    }
+
+    .easytolearn p {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 26px;
+        width: 95%;
+        margin-top: 50px;
+        color: #222222;
+    }
+}
+
+
+/* &&&&&&&&&&&&&&&  form &&&&&&&&&&&&&&&&&&&&&& */
+
+.info .row h1 {
+    font-family: 'Syne';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.8rem;
+    line-height: 56px;
+    font-stretch: extra-expanded;
+    text-transform: capitalize;
+    color: #1D1D1D;
+    margin-bottom: 30px;
+}
+.info .row .col-5:nth-child(1){
+    background-image: url(../contactimage/contact.jpg);
+    background-position: center;
+    background-size: cover;
+    color: #ffffff;
+} 
+.info .row .col-5:nth-child(1) h3{
+    color: #ffffff;
+}
+.info .row .col-5:nth-child(1) p{
+    color: #ffffff;
+}
+
+
+
+.info .col-5 {
+    padding: 25px 0px 0px 30px;
+    min-width: 300px;
+    border-radius: 8px;
+}
+
+.info .col-5 i {
+    margin-bottom: 50px;
+    font-size: 1.5rem;
+}
+
+.info .row p{
+    font-family: 'Syne';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: #242424;
+    word-wrap: break-word;
+}
+
+.info .row h3{
+    font-family: 'Syne';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 34px;
+    color: #095B43;
+}
+@media (max-width : 350px) {
+    .info .col-5 {
+        padding: 25px 0px 0px 30px;
+        /* max-width: 400px; */
+        min-width: 200px;
+    }
+}
+
+/* &&&&&&&&&&&&&&&&&&&&&&&& booking &&&&&&&&&&&&&&&&&&&& */
+
+.booking-box {
+
+    text-align: center;
+    margin: 50px 0 0px 0;
+}
+
+.booking-box h1 {
+    font-family: 'Syne';
+    font-style: normal;
+    font-weight: 600;
+    line-height: 56px;
+    color: #171717;
+    font-size: 2.8rem;
+}
+
+.booking-box p {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    margin-bottom: 50px;
+}
+
+.booking-box .box input {
+    display: inline-block;
+    width: 350px;
+    height: 64px;
+    margin: 50px;
+    position: relative;
+    background-color: inherit;
+    z-index: 0;
+    margin: 0;
+    border: 1px solid rgb(0, 0, 0);
+    outline: none;
+    padding: 5px;
+    font-size: 1.3rem;
+    color: red;
+    font-weight: 500;
+}
+
+/* .booking-box .input::placeholder{
+    display: inline-block;
+    z-index: 999;
+    position: absolute;
+    top: -10px;
+    left: 0;
+    font-size: 1.1rem;
+    color: #000000;
+    font-weight: 600;
+} */
+.booking-box .box {
+    position: relative;
+    margin: 30px;
+}
+
+.booking-box label {
+    position: absolute;
+    top: -12px;
+    left: 10px;
+    background: #ffffffee;
+    /* background-color: none; */
+    padding: 0px 10px;
+    z-index: 9;
+    font-weight: 600;
+}
+
+.booking-box .btn{
+    background-color: #1B1B1B;
+    color: #FFBC3E;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    width: 270px;
+    height: 60px;
+    margin-top: 30px;
+    transition: color ease-in-out .2s,background ease-in-out .2s;
+}
+.booking-box .btn:hover{
+    color: white;
+    background-color: #095B43;
+}
+@media (max-width : 400px){
+    .booking-box .box input {
+        width: 220px;
+        height: 55px;
+      
+    }
+
+    .booking-box .btn {
+        width: 120px;
+        height: 50px;
+    }
+}
+

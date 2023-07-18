@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/teacher.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/nav.js" defer></script>
+    <title>Teacher</title>
+</head>
+
+<body>
+    <%- include('../layout/nav.ejs') -%>
+
+        <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%% header %%%%%%%%%%%%%%%%% -->
+
+        <header>
+            <div class="container ">
+                <div class="row w-100">
+                    <div class="col-12 text-center w-100 d-flex justify-content-center align-content-center">
+                        <h1 class="main-heading">
+                            <%=header[0].mainheading%>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- &&&&&&&&&&&&&&&&&&&&&&&& teacher &&&&&&&&&&&&&&&&&&&&&&&&& -->
+
+        <div class="easytolearn">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2> <%= teacherp[0].heading  %> </h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p> <%= teacherp[0].paragraph  %>  </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- &&&&&&&&&&&&&&&&&&&&&&&&&&&&&& f-teacher &&&&&&&&&&&&&&&&&&& -->
+
+        <div class="container f-teacher">
+            <div id="row" class="row ">
+                <div class="col-8">
+                    <h3><%= ft[0].heading  %></h3>
+                    <p class="pr-1"><%= ft[0].p1  %></p>
+                    <p class="pr-2"><%= ft[0].p2  %></p>
+                </div>
+                <div class="col-3 ">
+                    <img src="image/<%= ft[0].image %> " alt="<%= ft[0].image %>">
+                </div>
+            </div>
+        </div>
+
+
+        <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ team @@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
+        <div class="chooseus">
+            <div class="container ">
+                <div class="row mb-5 pb-5">
+                    <div class="col-12">
+                        <h1>Our Cooperative Team</h1>
+                    </div>
+                </div>
+                <div class="row justify-content-around">
+                    <%for(let i = 0 ; i<team.length ; i++) {%>
+                    <div class="col-2">
+                        <div class="image"><img src="image/<%= team[i].image %> " alt="<%= team[i].image %>"></div>
+                        <div class="text">
+                            <h3><%= team[i].name  %></h3>
+                            <p><%= team[i].language  %></p>
+                        </div>
+                    </div>
+                    <%}%>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- &&&&&&&&&&&&&&&&&&&&&&&&&&&&&& Register &&&&&&&&&&&&&&&&&&&&&& -->
+
+        <div class="register">
+            <img class="img img-1 off" src="/teacherimage/img-1.png" alt="">
+            <img class="img img-2 off" src="/teacherimage/img-2.png" alt="">
+            <img class="img img-3 off" src="/teacherimage/img-3.png" alt="">
+            <img class="img-4" src="/teacherimage/Frame.png" alt="">
+            <div class="container">
+                <div class="row d-flex justify-content-center align-content-center">
+                    <div class="col-xl-6 text-center">
+                        <h1><%= tchcontact[0].heading  %></h1>
+                    </div>
+                    <div class="col-lg-6 text-center">
+                        <a class="gbtn" href="<%= tchcontact[0].route %>"><%= tchcontact[0].btn  %></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <%- include('../layout/footer.ejs') -%>
+</body>
+
+</html>

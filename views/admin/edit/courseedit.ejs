@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/dashbg.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/about.js" defer></script>
+    <title>Edit</title>
+</head>
+
+<body>
+    <a class="backhome fixed-top" href="/admin/dashcourse">Home</a>
+    <div class="color color-1"></div>
+    <div class="color color-2"></div>
+
+    
+    <!-- &&&&&&&&&&&&&&&&&&&&&&& learing quran -->
+
+    <% if(header2[0]){ %>
+
+    <div class="container fullbox">
+        <div class="row">
+            <div class="col-12 mt-5">
+                <form class="mt-3" action="holyquranedit?id=<%= header2[0]._id %>" method="post">
+                    <label for="paragraph">Paragraph</label>
+                    <input value="<%= header2[0].paragraph %>" type="text" name="paragraph" id="paragraph"><br><br>
+                    <input type="submit" value="Update">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <% }else{ %>
+
+        <div class="container fullbox">
+            <div class="row">
+                <div class="col-12">
+                    <h1 id="mainheading">Fee Structure Edit</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <form action="feestructureedit?id=<%= feecourse[0]._id  %>" method="post">
+                        <label for="heading">Heading</label>
+                        <input value="<%=  feecourse[0].heading  %>" type="text" name="heading" id="heading"><br><br>
+                        <label for="p1">Line One</label>
+                        <input value="<%=  feecourse[0].p1  %>"  type="text" name="p1" id="p1"><br><br>
+                        <label for="p2">Line Two</label>
+                        <input value="<%=  feecourse[0].p2  %>"  type="text" name="p2" id="p2"><br><br>
+                        <label for="amount">Amount per Month</label>
+                        <input value="<%=  feecourse[0].amount  %>"  type="text" name="amount" id="amount"><br><br>
+                        <input type="submit" value="Update">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <% } %>
+
+
+</body>
+
+</html>

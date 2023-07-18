@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/css/dashbord.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <a id="admin" href="adminform">Admin</a>
+    <a id="logout" href="logout">LogOut</a>
+    <header>
+    <div class="side-nav">
+        <span></span>
+        <h1>Noor-e-Ilam</h1>
+        <table>
+            <tbody>
+                <tr>
+                    <td><a href="navdash">Nav</a></td>
+                </tr>
+
+                <%for(let i=0 ; i<pages.length ; i++) {%>
+                    <tr>
+                        <td><a href="dash<%=pages[i].route%>">
+                                <%=pages[i].page%>
+                            </a></td>
+                    </tr>
+                    <%}%>
+                        <tr>
+                            <td><a href="dashfooter">Footer</a></td>
+                        </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="left">
+    <div class="div maindiv">
+        <h1 class="mainheading">View History</h1>
+        <div class="home">
+            <h1>Home</h1>
+            <span><%= home[0].view  %></span>
+        </div>
+        <div class="about">
+            <h1>About</h1>
+            <span><%= about[0].view  %></span>
+        </div>
+        <div class="course">
+            <h1>Course</h1>
+            <span><%= course[0].view  %></span>
+        </div>
+        <div class="teacher">
+            <h1>Teacher</h1>
+            <span><%= teacher[0].view  %></span>
+        </div>
+        <div class="blog">
+            <h1>Blog</h1>
+            <span><%= blog[0].view  %></span>
+        </div>
+        <div class="contact">
+            <h1> Contact Us </h1>
+            <span><%= contact[0].view  %></span>
+        </div>
+        <div class="reg">
+            <img src="/regimage/header-1.png" alt="">
+            <h1>Registartion</h1>
+            <span><%= reg[0].view  %></span>
+        </div>
+    </div>
+    <div class="formdiv maindiv">
+        <h1 class="mainheading">User Form</h1>
+        <div class="one">
+            <a href="freetrialform">Trial Form</a>
+        </div>
+        <div class="two">
+            <a href="contactform">Contact Form</a>
+        </div>
+        <div class="three">
+            <a href="finaleform">Finale Form</a>
+        </div>
+    </div>
+</div>
+</header>
+
+
+</body>
+</html>

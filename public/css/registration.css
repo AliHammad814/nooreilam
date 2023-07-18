@@ -1,0 +1,260 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: Syne;
+
+
+}
+
+
+/* &&&&&&&&&&&&&&&&&&&&&&&& header %%%%%%%%%%%%%%%%%%%%%% */
+
+header {
+    background-image: url(../regimage/header.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    margin-top: 70px;
+    background-position: center;
+    overflow-x: hidden;
+}
+
+header img {
+    position: absolute;
+    bottom: 0;
+}
+header .col-12{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+
+header h1 {
+    font-family: 'Syne';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 131.5%;
+    text-align: center;
+    letter-spacing: -0.01em;
+    text-transform: capitalize;
+    color: #FFFFFF;
+
+}
+
+header a {
+    display: inline-block;
+    font-family: 'Syne';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 131.5%;
+    /* or 72px */
+    text-decoration: none;
+    text-align: center;
+    letter-spacing: -0.01em;
+    text-transform: capitalize;
+    transition: color ease-in-out .2s;
+    color: #F8CB55;
+}
+header a:hover{
+  color:white;
+}
+
+@media (max-width:1025px) {
+
+    header h1,
+    header a {
+        font-weight: 600;
+        font-size: 3rem;
+    }
+
+}
+
+@media (max-width:955px) {
+
+    header h1,
+    header a {
+        font-weight: 600;
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width:700px) {
+
+    header h1,
+    header a {
+        font-weight: 600;
+        font-size: 2rem;
+    }
+}
+
+@media (max-width:560px) {
+
+    header h1,
+    header a {
+        font-weight: 600;
+        font-size: 1.4rem;
+    }
+}
+
+
+
+/* &&&&&&&&&&&&&&&  info &&&&&&&&&&&&&&&&&&&&&& */
+
+.info .row h3{
+    font-family: 'Syne';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+    color: #222222;
+    margin: 100px 0;
+    width: 900px;
+}
+@media (max-width : 1092px) {
+    .info .row h3{
+        width: 600px;
+    }
+}
+@media (max-width : 800px) {
+    .info .row .col-12 h3{
+        width: 466px;
+        font-size: 18px;
+    }
+}
+@media (max-width : 500px) {
+    .info .row .col-12 h3{
+        width: 80%;
+        font-size: 18px;
+    }
+}
+
+
+
+/* &&&&&&&&&&&&&&&&&&&&&&&&& .booking-box %%%%%%%%%%%%%%%%%%%%% */
+
+.booking-box {
+
+    text-align: center;
+    margin: 50px 0 0px 0;
+}
+
+.booking-box h1 {
+    font-family: 'Syne';
+    font-style: normal;
+    font-weight: 600;
+    line-height: 56px;
+    color: #171717;
+    font-size: 2.8rem;
+    text-transform: capitalize;
+}
+.booking-box p{
+    font-weight: 400;
+   font-size: 22px;
+   line-height: 26px;
+   margin-bottom: 50px;
+}
+
+.booking-box .box input {
+    display: inline-block;
+    width: 350px;
+    height: 64px;
+    margin: 50px;
+    position: relative;
+    background-color: inherit;
+    z-index: 0;
+    margin: 0;
+    border: 1px solid rgb(0, 0, 0);
+    outline: none;
+    padding: 5px;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+/* .booking-box .input::placeholder{
+    display: inline-block;
+    z-index: 999;
+    position: absolute;
+    top: -10px;
+    left: 0;
+    font-size: 1.1rem;
+    color: #000000;
+    font-weight: 600;
+} */
+.booking-box .box {
+    position: relative;
+    margin: 30px;
+}
+
+.booking-box label {
+    position: absolute;
+    top: -12px;
+    left: 10px;
+    background: #ffffffee;
+    /* background-color: none; */
+    padding: 0px 10px;
+    z-index: 9;
+    font-weight: 600;
+}
+
+.booking-box .btn{
+    background-color: #1B1B1B;
+    color: #FFBC3E;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    width: 270px;
+    height: 60px;
+    margin-top: 30px;
+    transition: color ease-in-out .2s,background ease-in-out .2s;
+}
+.booking-box .btn:hover{
+    color: white;
+    background-color: #095B43;
+}
+.booking-box .box-4 select{
+    width: 350px;
+    height: 64px;
+    margin: 50px;
+    position: relative;
+    background-color: inherit;
+    z-index: 0;
+    margin: 0;
+    border: 1px solid rgb(0, 0, 0);
+    outline: none;
+    padding: 5px;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+.booking-box .box-5 input {
+    width: 760px;
+}
+
+@media (max-width : 1199px) {
+    .booking-box .box-5 input{
+        width: 350px;
+    }
+}
+@media (max-width : 400px){
+    .booking-box .box-4 select,
+    .booking-box .box input {
+        width: 220px;
+        height: 55px;
+      
+    }
+
+    .booking-box .btn {
+        width: 120px;
+        height: 50px;
+    }
+}

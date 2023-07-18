@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+
+<body>
+    <a class="backhome fixed-top" href="/admin">Home</a>
+    <div class="color color-1"></div>
+    <div class="color color-2"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 id="mainheading">Noor-e-Ilam Free Trial User </h1>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <form action="userupdate" method="post">
+            <div class="row">
+                <%for(let i=0 ; i<user.length ; i++) {%>
+                    <div id="rlt" class="col-6 formbox">
+                        <input type="checkbox" name="<%= user[i]._id %>" id="check">
+                        <a id="link" href="userformremove?id=<%= user[i]._id %>">Remove</a>
+                        <h1>User Data</h1>
+                        <h2><span>Name:</span>
+                            <%= user[i].fullname %>
+                        </h2>
+                        <h2><span>Email:</span>
+                            <%= user[i].email %>
+                        </h2>
+                        <h2><span>Number:</span>
+                            <%= user[i].number %>
+                        </h2>
+                        <h2><span>Course:</span>
+                            <%= user[i].course %>
+                        </h2>
+                    </div>
+                    <%}%>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <h1 id="subheading">With Requirements</h1>
+                </div>
+            </div>
+            <div class="row">
+                <%for(let i=0 ; i<userreq.length ; i++) {%>
+                    <div id="rlt" class="col-6 ">
+                        <input type="checkbox" name="<%= userreq[i]._id %>" id="">
+                        <a id="link" href="userformremove?id=<%= userreq[i]._id %>">Remove</a>
+                        <h1>User Data</h1>
+                        <h2><span>Name:</span>
+                            <%= userreq[i].fullname %>
+                        </h2>
+                        <h2><span>Email:</span>
+                            <%= userreq[i].email %>
+                        </h2>
+                        <h2><span>Number:</span>
+                            <%= userreq[i].number %>
+                        </h2>
+                        <h2><span>Course:</span>
+                            <%= userreq[i].course %>
+                        </h2>
+                        <h2><span>Requirements:</span>
+                            <%= userreq[i].requirement %>
+                        </h2>
+                    </div>
+                    <%}%>
+            </div>
+            <input type="submit" value="Add">
+        </form>
+    </div>
+
+</body>
+
+</html>

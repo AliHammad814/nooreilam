@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to bottom, #f1f4f9, #dff1ff);
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+section {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+}
+
+.color {
+    position:absolute;
+    filter: blur(100px);
+}
+
+.color:nth-child(1) {
+    top: -350px;
+    width: 100%;
+    height: 100%;
+    background: #0ece00;
+}
+
+.color:nth-child(2) {
+    bottom: 0px;
+    left: 100px;
+    width: 100vw;
+    height: 50vh;
+    background: #ffb300;
+}
+
+.color:nth-child(3) {
+    bottom: 0px;
+    right: 200px;
+    width: 100vw;
+    height: 50vh;
+    background: #ff003c;
+}
+
+
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.1);
+  
+}
+
+.form{
+    position: relative;
+    width: 400px;
+    padding: 40px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.form h2 {
+    position: relative;
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+}
+
+.form h2::before {
+    content: "";
+    position: absolute;
+    background: #fff;
+    height: 4px;
+    width: 75px;
+    top: 35px;
+}
+
+form .inputbox {
+    width: 100%;
+    margin-top: 20px;
+}
+
+form .inputbox input {
+
+    width: 87%;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 35px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+}
+
+form .inputbox input::placeholder {
+    color: #fff;
+}
+
+form .inputbox input[type="submit"] {
+    background: #fff;
+    color: #666;
+    width: 100px;
+    cursor: pointer;
+    margin-bottom: 28px;
+    font-weight: 600;
+}
+
+.forgot {
+    margin-top: 5px;
+    color: #fff;
+}
+
+.forgot a {
+    color: #fff;
+    font-weight: 600;
+}
+
+
+
+.scr{
+    position: absolute;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(120, 114, 114, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    animation: any 10s linear infinite;
+    animation-delay: calc(-1s * var(--i));
+
+}
+
+p.p{
+    color: red;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+@keyframes any {
+
+    0%,
+    100% {
+        transform: translateY(-40px);
+    }
+
+    50% {
+        transform: translateY(40px);
+    }
+
+}
+form{
+    display: inline-block;
+    z-index: 9;
+}
+
+.scr:nth-child(1){
+    top: -40px;
+    right: -60px;
+    width: 100px;
+    height: 100px;
+}
+
+.scr:nth-child(2) {
+    top: 30px;
+    left: -30px;
+    width: 60px;
+    height: 60px;
+    z-index: 1;
+}
+
+.scr:nth-child(3) {
+    bottom: -5px;
+    left: -60px;
+    width: 120px;
+    height: 120px;
+    z-index: 1;
+}
+
+.scr:nth-child(4) {
+    bottom: 0px;
+    right: -10px;
+    width: 50px;
+    height: 50px;
+
+}
+
+.scr:nth-child(5) {
+    top: -40px;
+    left: 200px;
+    width: 80px;
+    height: 80px;
+    z-index: 1;
+}
+
+
+
+@media (max-width : 500px) {
+    .form h2 {
+        position: relative;
+        color: white;
+        font-size: 20px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        margin-bottom: 40px;
+    }
+    .form{
+        position: relative;
+        width: 280px;
+        margin-top: 80px;
+        padding: 40px;
+        backdrop-filter: blur(5px);
+        box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        margin-left: 50px;
+        z-index: 9;
+    }
+    .scr:nth-child(1){
+        top: -40px;
+        right: -20px;
+        width: 60px;
+        height: 60px;
+    }
+    
+    .scr:nth-child(2) {
+        top: 30px;
+        left: -10px;
+        width: 40px;
+        height: 40px;
+        z-index: 1;
+    }
+    
+    .scr:nth-child(3) {
+        bottom: -30px;
+        left: 30px;
+        width: 70px;
+        height: 70px;
+        z-index: 1;
+    }
+    
+    .scr:nth-child(4) {
+        bottom: -20px;
+        right: 0px;
+        width: 35px;
+        height: 35px;
+    
+    }
+    
+    .scr:nth-child(5) {
+        top: -40px;
+        left: 100px;
+        width: 50px;
+        height: 50px;
+        z-index: 99;
+    }
+}

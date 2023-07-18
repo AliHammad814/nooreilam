@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/dashbg.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+</head>
+<body>
+
+    <a class="backhome fixed-top" href="/admin/dashhome">Home</a>
+    <div class="color color-1"></div>
+    <div class="color color-2"></div>
+
+
+    <% if(hcourse[0]) {%>
+    <div class="container fullbox">
+        <div class="row">
+            <div class="col-12">
+                <h1 id="mainheading">
+                    Offered Courses Edit
+                </h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <form action="homecourseeditdata?id=<%=hcourse[0]._id%>" method="post" enctype="multipart/form-data">
+                    <label for="heading">Heading</label>
+                    <input value="<%= hcourse[0].heading  %>" type="text" name="heading" id="heading" required><br><br>
+                    <label for="paragraph">paragraph</label>
+                    <input type="text" value="<%= hcourse[0].paragraph  %>" name="paragraph" id="paragraph" required><br><br>
+                    <label for="link">Link</label>
+                    <input value="<%= hcourse[0].link  %>" type="text" name="link" id="link" required><br><br>
+                    <label for="route">Route</label>
+                    <input value="<%= hcourse[0].route  %>" type="text" name="route" id="route" required><br><br>
+                    <label for="image">Image</label>
+                    <input type="file" name="image" id="image" ><br><br>
+                    <input type="submit" value="Update">
+                </form>
+            </div>
+        </div>
+    </div>
+    <% }else{ if(chooseus[0]) {%> 
+
+    <div class="container fullbox">
+        <div class="row">
+            <div class="col-12">
+                <h1 id="mainheading">
+                    Why Choose Us Edit
+                </h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <form action="homechooseusedit?id=<%=chooseus[0]._id%>" method="post" enctype="multipart/form-data">
+                    <label for="heading">Heading</label>
+                    <input value="<%=  chooseus[0].heading  %>" type="text" name="heading" id="heading" required><br><br>
+                    <label for="image">Image</label>
+                    <input type="file" name="image" id="image"><br><br>
+                    <input type="submit" value="Update">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <% }else{ if(blog[0]){%>
+        <div class="container fullbox">
+            <div class="row">
+                <div class="col-12">
+                    <h1 id="mainheading">
+                       Blog Edit
+                    </h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <form action="homeblogedit?id=<%=blog[0]._id%>" method="post" enctype="multipart/form-data">
+                        <label for="heading">Heading</label>
+                        <input value="<%= blog[0].heading %>" type="text" name="heading" id="heading" required><br><br>
+                        <label for="paragraph">paragraph</label>
+                        <input value="<%= blog[0].paragraph %>" type="text" name="paragraph" id="paragraph" required><br><br>
+                        <label for="image">Image</label>
+                        <input type="file" name="image" id="image" ><br><br>
+                        <input type="submit" value="Update">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <% }else{ %>
+
+            <div class="container mt-5 fullbox">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 id="mainheading">Testimonial Edit</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <form action="testiedit?id=<%=testi[0]._id%>" method="post" enctype="multipart/form-data">
+                            <label for="mainheading">Main Heading</label>
+                            <input value="<%= testi[0].name  %>" type="text" name="mainheading" id="mainheading"><br><br>
+                            <label for="subheading">Sub Heading</label>
+                            <input value="<%= testi[0].position  %>" type="text" name="subheading" id="subheading"><br><br>
+                            <label for="paragraph">paragraph</label>
+                            <input value="<%= testi[0].review  %>" type="text" name="paragraph" id="paragraph"><br><br>
+                            <label for="image">Iamge</label>
+                            <input type="file" name="image" id="image"><br><br>
+                            <input type="submit" value="Update">
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        <%} }}%>
+</body>
+</html>

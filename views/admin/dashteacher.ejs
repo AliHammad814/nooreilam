@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/teacher.css">
+    <link rel="stylesheet" href="css/dashbg.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard</title>
+</head>
+<body>
+    <a class="backhome fixed-top" href="/admin">Home</a>
+    <div class="color color-1"></div>
+    <div class="color color-2"></div>
+    <div class="container fullbox">
+        <div class="row">
+            <div class="col-12">
+                <h1  id="mainheading">Header</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <form action="headerteacherdata" method="post">
+                    <label for="mainheading">Heading</label>
+                    <input type="text" name="mainheading" value="QURAN TUITION CLASSES WITH BEST TUTORS"><br><br>
+                    <input type="submit" value="UpDate">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- &&&&&&&&&&&&&&&&&&& teacher %%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+    <div class="container fullbox">
+        <div class="row">
+            <div class="col-12">
+                <h1 id="mainheading">Looking For Tutor</h1>
+            </div>
+        </div>
+        <div id="tutor" class="row">
+            <div class="col-12">
+                <form action="teacherp" method="post">
+                    <label for="heading">Heading</label>
+                    <input type="text" name="heading" id="heading"><br><br>
+                    <label for="paragraph">Paragraph</label>
+                    <input type="text" name="paragraph" id="paragraph"><br><br>
+                    <input type="submit" value="Update">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- &&&&&&&&&&&&&&&&&&&&&& f-teacher &&&&&&&&&&&&&&&&&& -->
+
+    <div class="container fullbox">
+        <div class="row">
+            <div class="col-12">
+                <h1 id="mainheading"> Female Teachers Section</h1>
+            </div>
+        </div>
+        <div id="ft" class="row">
+            <div class="col-12">
+                <form action="ftdata" method="post" enctype="multipart/form-data">
+                    <label for="heading">Heading</label>
+                    <input type="text" name="heading" id="heading"><br><br>
+                    <label for="p1">Paragraph One</label>
+                    <input type="text" name="p1" id="p1"><br><br>
+                    <label for="p2">Paragraph Two</label>
+                    <input type="text" name="p2" id="p2"><br><br>
+                    <label for="image">Image</label>
+                    <input type="file" name="image" id="image"><br><br>
+                    <input type="submit" value="Update">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- %%%%%%%%%%%%%%%%%%%% team %%%%%%%%%%%%%%%%% -->
+
+    <div class="container fullbox">
+        <div class="row">
+            <div class="col-12">
+                <h1 id="mainheading">Team Section</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <form action="teammem" method="post" enctype="multipart/form-data">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" required><br><br>
+                    <label for="language">Languages</label>
+                    <input type="text" name="language" required id="language" placeholder="Add All Languages"><br><br>
+                    <label for="image">Image</label>
+                    <input type="file" name="image" required id="image"><br><br>
+                    <input type="submit" value="Add New">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="team" class="chooseus">
+        <div class="container">
+            <div class="row justify-content-around">
+                <%for(let i = 0 ; i<team.length ; i++) {%>
+                <div class="col-2" id="rlt">
+                    <div class="image"><img src="image/<%= team[i].image %>"
+                        alt="<%= team[i].image %>"></div>
+                    <div  class="text">
+                        <h3><%= team[i].name  %></h3>
+                        <p><%= team[i].language  %></p>
+                        <a id="link" class="up" href="teamremove?id=<%=team[i]._id%>">Remove</a>
+                        <a id="edit" class="up" class="up" href="teacheredit?id=<%=team[i]._id%>">Edit</a>
+                    </div>
+                </div>
+                <%}%>
+            </div>
+        </div>
+    </div>
+
+    <div class="container fullbox">
+        <div class="row">
+            <div class="col-12">
+                <h1 id="mainheading">Contact Us Section</h1>
+            </div>
+        </div>
+        <div id="contact" class="row">
+            <div class="col-12">
+                <form action="teachercontact" method="post">
+                    <label for="heading">Heading</label>
+                    <input type="text" name="heading" id="heading"><br><br>
+                    <label for="btn">Button</label>
+                    <input type="text" name="btn" id="btn"><br><br>
+                    <label for="btnroute">Button Route</label>
+                    <input type="text" name="btnroute" id="btnroute"><br><br>
+                    <input type="submit" value="Update">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

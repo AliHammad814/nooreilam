@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/testi.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/dashbg.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/testi.js" defer></script>
+    <script src="js/about.js" defer></script>
+    <title>About Dashboard</title>
+</head>
+
+<body>
+    <a class="backhome fixed-top" href="/admin">Home</a>
+    <div class="color color-1"></div>
+    <div class="color color-2"></div>
+    <div class="container fullbox">
+        <div class="row">
+            <div class="col-12">
+                <h1 id="mainheading">Header</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <form action="headeraboutdata" method="post" enctype="multipart/form-data">
+                    <label for="mainheading">Main Heading</label>
+                    <input type="text" name="mainheading"
+                        value="Learning The Quran Is A Noble And Rewarding Endeavor For Muslims"><br><br>
+                    <label for="subimage">Sub Image</label>
+                    <input type="file" name="image" id="subimage"><br><br>
+                    <input type="submit" value="UpDate">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- &&&&&&&&&&&&&&&&&&&&& easyquran -->
+
+    <div id="easy" class="container fullbox">
+        <div class="row">
+            <div class="col-12">
+                <h1 id="mainheading">Easy Quran</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <form action="easyquran" method="post">
+                    <label for="heading">Heading</label>
+                    <input type="text" value="We make quran easy to learn for everyone" name="heading"
+                        id="heading"><br><br>
+                    <label for="paragraph">Paragraph</label>
+                    <input type="text"
+                        value="The Book of Allah has a great data with respect to each matter of life. This data can help us in spending fruitful lives. Quran Translation of the Holy Book helps in appreciating the Quran in the best way. It is a Quran academy providing state of the art education to students. It is a virtual platform where students can easily learn Quran according to their preferred timings. There are different classes designed for students of different age groups. Academy has designed a special class for kids. There is a pre-requisite that has been put up for taking this class that a child must take. It is a pre-requisite for a child to take Noorani Qaida Course prior joining the class. The duration of class for children is set to be 30 minutes in which every child is been taught according to his/her ability."
+                        name="paragraph" id="paragraph"><br><br>
+                    <input type="submit" value="UpDate">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- &&&&&&&&&&&&&&&&&&&&&&& learing quran -->
+
+    <div class="container fullbox">
+        <div class="row">
+            <div class="col-12">
+                <h1 id="mainheading">Tips for learning Quran</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <form action="learingquran" method="post" enctype="multipart/form-data">
+                    <label for="heading">Heading</label>
+                    <input type="text" name="heading" required id="heading"><br><br>
+                    <label for="paragraph">Paragraph</label>
+                    <input type="text" required name="paragraph" id="paragraph"><br><br>
+                    <label for="image">Image</label>
+                    <input type="file" name="image" required id="image"><br><br>
+                    <input type="submit" value="Add New">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="quran" class="quran">
+        <div class="container">
+            <div class="main">
+                <%for(let i=0 ; i<learningquran.length ; i++) {%>
+                    <div id="rlt" class="row flex-wrap d-flex justify-content-center ">
+                        <div class="col-5 text order-tp  d-flex justify-content-evenly flex-column">
+                            <h3>
+                                <%= learningquran[i].heading %>
+                            </h3>
+                            <p>
+                                <%= learningquran[i].paragraph %>
+                            </p>
+                            <a id="link" href="learningquranremove?id=<%=learningquran[i]._id%>">Remove</a>
+                            <a id="edit" href="quranedit?id=<%=learningquran[i]._id%>">Edit</a>
+                        </div>
+                        <div class="col-5 order-bt img d-flex justify-content-evenly">
+                            <div class="div-right"><img src="image/<%= learningquran[i].image %> "
+                                    alt="<%= learningquran[i].image %>"></div>
+                        </div>
+                    </div>
+                    <%}%>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- &&&&&&&&&&&&&&&&&&&&&& reg &&&&&&&&&&&&&&&&&&&&& -->
+
+
+    <div class="container fullbox">
+        <div class="row">
+            <div class="col-12">
+                <h1 id="mainheading">
+                    Register Box
+                </h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <form action="aboutregdata" method="post" enctype="multipart/form-data">
+                    <label for="heading">Heading</label>
+                    <input type="text" name="heading" id="heading"><br><br>
+                    <label for="image">Image</label>
+                    <input type="file" name="image" id="image"><br><br>
+                    <input type="submit" value="Update">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- &&&&&&&&&&&&&&&&&&&&&&&&&&&&&& Register &&&&&&&&&&&&&&&&&&&&&& -->
+
+    <div id="reg" class="register mb-5">
+        <img src="image/<%= aboutreg[0].image %>" alt="<%= aboutreg[0].image %>">
+        <div class="container h-100 ">
+            <div class="row h-100 align-content-center">
+                <div class="col-12">
+                    <h1>
+                        <%= aboutreg[0].heading%>
+                    </h1>
+                    <a class="gbtn" href="./registration.html">Register Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- &&&&&&&&&&&&&&&&& testi &&&&&&&&&&& -->
+
+    <div class="container mt-5 fullbox">
+        <div class="row">
+            <div class="col-12">
+                <h1 id="mainheading">Testimonial</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <form action="testidata" method="post" enctype="multipart/form-data">
+                    <label for="mainheading">Main Heading</label>
+                    <input type="text" name="mainheading" id="mainheading"><br><br>
+                    <label for="subheading">Sub Heading</label>
+                    <input type="text" name="subheading" id="subheading"><br><br>
+                    <label for="paragraph">paragraph</label>
+                    <input type="text" name="paragraph" id="paragraph"><br><br>
+                    <label for="image">Image</label>
+                    <input type="file" name="image" id="image"><br><br>
+                    <input type="submit" value="Add New">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="testi">
+        <div class="container my-5">
+            <i class="arrow right right-arrow fa fa-chevron-right"></i>
+            <i class="arrow left left-arrow fa fa-chevron-left"></i>
+            <div class="row main-row  justify-content-around main">
+                <%for(let i=0 ; i<testi.length ; i++) {%>
+                    <div class="col-3 box storright box-1">
+                        <i class="dot">,,</i>
+                        <a id="link" href="testiremove?id=<%=testi[i]._id%>">Remove</a>
+                        <a id="edit" href="testiedit?id=<%=testi[i]._id%>">Edit</a>
+                        <div class="row">
+                            <div class="col-12 d-flex align-items-center">
+                                <img src="image/<%= testi[i].image %> " alt="<%= testi[i].image %>">
+                                <h1>
+                                    <%= testi[i].name %> <span>
+                                            <%= testi[i].position %>
+                                        </span>
+                                </h1>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="row">
+                                <div class="col-12 pt-5">
+                                    <p>
+                                        <%= testi[i].review %>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <%}%>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

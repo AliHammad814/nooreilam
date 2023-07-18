@@ -1,0 +1,261 @@
+body {
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #f1f4f9, #dff1ff);
+}
+
+.color {
+    position:
+        absolute;
+    filter: blur(100px);
+}
+
+.color-1 {
+    top: -350px;
+    width: 60%;
+    height: 600px;
+    background: #17eb5a;
+}
+
+.color-2 {
+
+    left: 100px;
+    width: 60%;
+    height: 600px;
+    background: #fffd87;
+}
+
+.color-3 {
+    top: 4000px;
+    right: 200px;
+    width: 450px;
+    height: 100%;
+    background: #549bf1;
+}
+
+.container {
+    position: relative;
+}
+
+/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&  */
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input[type='submit']{
+    width: 200px;
+    text-align: center;
+    align-self: center;
+    margin-bottom: 50px;
+    transition: .5s;
+    font-weight: 600;
+    color: red;
+    background-color: rgb(187, 185, 185);
+    display: inline-block;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 0px 20px 0px 20px;
+    padding: 15px;
+    box-shadow: 0px 0px 6px 6px rgba(195, 195, 195, 0.742);
+    margin-top: 50px;
+}
+
+form input[type='submit']:hover {
+    color: white;
+    letter-spacing: 3px;
+    background-color: red;
+}
+
+h1#mainheading {
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    font-weight: 700;
+    color: rgb(10, 10, 10);
+    font-size: 3rem;
+}
+
+.row .col-6{
+    background-color: rgb(219, 219, 219);
+    width: 400px;
+    border-radius: 0 40px 0 40px;
+    overflow: hidden;
+    padding: 0 0 20px 0;
+    margin: 30px 0;
+    border: 1px solid rgb(181, 181, 181);
+    box-shadow: 0px 0px 10px 2px rgb(144, 144, 144);
+}
+.row .col-6 h1{
+    text-align: center;
+    color: rgb(127, 127, 127);
+    font-size: 1.9rem;
+    font-weight: 700;
+    border-bottom: 2px solid rgb(129, 129, 129);
+}
+.row .col-6 h2{
+  margin-left: 20px;
+  font-size: 1.2rem;
+  color: gray;
+}
+.row .col-6 h2 span{
+    color: red;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-right: 10px;
+}
+form .row{
+    display: flex;
+    justify-content: space-around;
+}
+div.main{
+    display: flex;
+    justify-content: space-around;
+}
+.mainrow{
+    display: flex;
+    justify-content: space-around;
+}
+
+#subheading{
+    color: rgb(17, 16, 16);
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+
+
+
+#rlt {
+    position: relative;
+}
+
+a#link {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: red;
+    color: white;
+    font-weight: 600;
+    padding: 5px 10px;
+    font-size: 1.2rem;
+    border-bottom-left-radius: 10px;
+    transition: .5s;
+    text-decoration: none;
+}
+
+input[type = 'checkbox']{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+}
+a#check {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: red;
+    color: white;
+    font-weight: 600;
+    padding: 5px 10px;
+    font-size: 1.2rem;
+    border-bottom-right-radius: 10px;
+    transition: .5s;
+    text-decoration: none;
+}
+a#check:hover {
+    background-color: white;
+    color: red;
+}
+a#admin {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: red;
+    color: white;
+    font-weight: 600;
+    padding: 5px 15px;
+    font-size: 1.2rem;
+    border-bottom-left-radius: 10px;
+    transition: .5s;
+    text-decoration: none;
+}
+a#admin:hover {
+    background-color: white;
+    color: red;
+}
+a#logout {
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    background-color: red;
+    color: white;
+    font-weight: 600;
+    padding: 5px 10px;
+    font-size: 1.2rem;
+    border-bottom-left-radius: 10px;
+    transition: .5s;
+    text-decoration: none;
+}
+a#logout:hover {
+    background-color: white;
+    color: red;
+}
+
+
+
+
+
+
+
+a#link:hover {
+    background-color: white;
+    color: red;
+}
+
+
+@media (max-width : 600px) {
+
+
+    h1#mainheading {
+
+        font-size: 1.7rem;
+        margin-top: 50px;
+    }
+    h1#subheading {
+
+        font-size: 1.3rem;
+    }
+
+    .row .col-6{
+        width: 280px;
+    }
+    .row .col-6 h1{
+        text-align: center;
+        color: rgb(127, 127, 127);
+        font-size: 1.4rem;
+        font-weight: 700;
+        border-bottom: 2px solid rgb(129, 129, 129);
+    }
+
+    .row .col-6 h2{
+        margin-left: 10px;
+        font-size: 1rem;
+        color: gray;
+      }
+      .row .col-6 h2 span{
+          color: red;
+          font-size: 1.1rem;
+          font-weight: 700;
+          margin-right: 5px;
+      }
+
+      a#link{
+        font-size: 1rem;
+      }
+
+
+}

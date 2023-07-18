@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/nav.js" defer></script>
+    <title>Contact Us</title>
+</head>
+
+<body>
+    <%- include('../layout/nav.ejs') -%>
+
+        <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55 header %%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+        <header>
+            <div class="container ">
+                <div class="row w-100">
+                    <div class="col-12 text-center w-100 d-flex justify-content-center align-content-center">
+                        <h1 class="main-heading text-start">
+                            <%=header[0].mainheading%>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <!-- &&&&&&&&&&&&&&&&&&&&&&&& teacher &&&&&&&&&&&&&&&&&&&&&&&&& -->
+
+<div class="easytolearn">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2> <%= contactp[0].heading  %> </h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <p> <%= contactp[0].paragraph  %></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$4 info $$$$$$$$$$$$$$$$$$$$$$$$ -->
+<div class="container info mb-5 pb-5">
+    <div class="row mb-5">
+        <div class="col-12 mb-3">
+            <h1>Contact Info.</h1>
+        </div>
+    </div>
+    <div class="row d-flex justify-content-around flex-wrap">
+        <%for(let i = 0 ; i<info.length ; i++) {%>
+            <div class="col-5 left mb-5">
+                <i class= " icon me-3 <%= info[i].icon %> "></i>
+                <h3><%= info[i].heading  %></h3>
+                <p><%= info[i].paragraph  %></p>
+            </div>
+            <%}%>
+    </div>
+</div>
+
+<!-- &&&&&&&&&&&&&&&&&&&&&&&&&&&& booking &&&&&&&&&&&&&&&&&&&&&&& -->
+
+
+<div class="booking-box">
+    <div class="container">
+        <div class="row d-flex justify-content-center align-content-center">
+            <div class="col-12 my-3">
+                <h1>Get in touch</h1>
+            </div>
+            <div class="col-7 mb-4">
+                <p>Kindly submit the form below for a Free Trial Class to have a glimpse of the experience at our Academy</p>
+            </div>
+            <div class="col-9">
+                <div class="input-box">
+                    <form action="contactformdata" class="d-flex flex-wrap justify-content-center" method="post">
+
+                        <div class="box-1 box">
+                            <label for="fullname">Full Name:</label>
+                            <input type="text" name="fullname" id="fullname" required>
+                        </div>
+                        <div class="box-2 box">
+                            <label for="number">Phone No:</label>
+                            <input type="number" name="number" required id="number">
+                        </div>
+                        <div class="box-3 box">
+                            <label for="email">Email:</label>
+                            <input type="text" name="email" id="email" required>
+                        </div>
+                        <div class="box-4 box">
+                            <label for="message">Message:</label>
+                            <input type="text" name="message" id="message">
+                        </div><br>
+                        <div class="col-12"><input type="submit" class="btn" value="Send"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <%-  include('../layout/footer.ejs')   -%>
+</body>
+</html>

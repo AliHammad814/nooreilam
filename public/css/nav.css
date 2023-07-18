@@ -1,0 +1,212 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.ybtn{
+    display: inline-block;
+  transition: color ease-in-out .2s, background ease-in-out .2s;
+}
+.gbtn{
+    display: inline-block;
+  transition: color ease-in-out .2s, background ease-in-out .2s;
+}
+.btnclr:hover{
+    color: white;
+    background-color: #FDC351;
+}
+.gbtn:hover{
+    color: white;
+    background-color: #095B43;
+}
+
+
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%% nav %%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+.color{
+    color:#FDC351;
+}
+nav .show-nav{
+    right: 0px;
+}
+nav .of-nav{
+    right: -1200px;
+}
+nav {
+    width: 100vw;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    z-index: 9999;
+
+    
+}
+
+nav .nav-box {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .nav-items {
+    list-style: none;
+    display: inline-block;
+    margin-top: 12px;
+    
+}
+
+nav .logo a {
+    font-family: 'Syne';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+    padding: 20px 0;
+    display: inline-block;
+    text-decoration: none;
+}
+
+nav .nav-items li,
+nav .nav-items li a {
+    text-decoration: none;
+    display: inline-block;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+    text-align: right;
+    margin-left: 1.2rem;
+    transition: color ease-in-out .2s;
+    
+
+}
+
+nav .nav-items li:nth-last-child(2) a{
+    text-align: center;
+    padding: 10px 20px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #FDC351;
+    background: #000D04;
+    border-radius: 4px;
+    width: 132px;
+    height: 41px;
+    transition: color ease-in-out .2s, background ease-in-out .2s;
+}
+nav .nav-items li:nth-last-child(2) a:hover{
+    background-color:#FDC351;
+    color: #fefefe;
+}
+nav i.none,
+nav li.x
+{
+    display: none;
+}
+nav .nav-items li:hover,
+nav .nav-items li a:hover
+{
+    color:#FDC351;
+   
+
+}
+
+@media (max-width : 1150px){
+    nav{
+        position: relative;
+        /* overflow-y: hidden; */
+    }
+   nav .nav-items{
+    /* display: none; */
+    display: flex;
+    flex-direction: column;
+    background-color: #FDC351;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -14px;
+    /* right: -900px; */
+    transition: right ease-in-out 1s;
+    width: 75%;
+    height: 100vh;
+    z-index: 999;
+    padding-right: 40px;
+    
+   }
+   nav .nav-items li{
+    margin-bottom: 30px;
+   
+   }
+   nav .nav-items li a{
+    font-size: 1.1rem;
+   }
+   nav i.none{
+    display: inline-block;
+    position: absolute;
+    right: 25px;
+    top: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+  nav .nav-items .x{
+    display: inline-block;
+    position: absolute;
+    left: 0px;
+    top: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  nav .nav-items li:hover,
+nav .nav-items li a:hover
+{
+    color: #ffffff;
+   
+}
+}
+@media (max-width : 450px){
+    nav .nav-items li a{
+        font-size: 1.1rem;
+       }
+    nav i.none{
+        right: 20px;
+    }
+}
+
+
+
+
+/* %%%%%%%%%%%%%%%%%%%%% footer %%%%%%%%%%%%%%%%%%%%%% */
+
+footer.footer-1 a{
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    color: #373737;
+    margin-bottom: 25px;
+    transition: color ease-in-out .2s;
+    word-break: break-all;
+}
+footer.footer-1 a:hover{
+    color: #FDC351;
+}
+.footer-1 h5 a{
+    color: black;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+
+@media (max-width : 575px) {
+    img.off{
+        display: none;
+    }
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/dashbg.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/about.js" defer></script>
+    <title>Edit</title>
+</head>
+
+<body>
+    <a class="backhome fixed-top" href="/admin/dashteacher">Home</a>
+    <div class="color color-1"></div>
+    <div class="color color-2"></div>
+
+
+    <div class="container fullbox">
+        <div class="row">
+            <div class="col-12">
+                <h1 id="mainheading">Team Section Edit</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <form action="teamedit?id=<%= team[0]._id  %>" method="post" enctype="multipart/form-data">
+                    <label for="name">Name</label>
+                    <input value="<%= team[0].name  %>" type="text" name="name" id="name" required><br><br>
+                    <label for="language">Languages</label>
+                    <input value="<%= team[0].language  %>"  type="text" name="language" required id="language" placeholder="Add All Languages"><br><br>
+                    <label for="image">Image</label>
+                    <input type="file" name="image" id="image"><br><br>
+                    <input type="submit" value="Update">
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    
+
+
+</body>
+
+</html>

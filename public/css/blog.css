@@ -1,0 +1,286 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: Syne;
+    /* overflow-x: hidden; */
+}
+
+
+/* &&&&&&&&&&&&&&&&&&&&&&&& header %%%%%%%%%%%%%%%%%%%%%% */
+
+header{
+    background-image: url(../blogimage/header.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    margin-top: 70px;
+    background-position: center;
+}
+header h1{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3.2rem;
+    color:  #FFFFFF;;
+    line-height: 55px;
+    text-transform: capitalize;
+    position: absolute;
+    text-shadow: 0px 4.17592px 0px rgba(141, 108, 21, 0.23);
+    top: 150px;
+    line-height: 130%;
+    word-spacing: 5px;
+    color: #F8CB55;
+    max-width: 800px;
+    margin-left: 10px;
+   
+}
+
+@media (max-width:1025px){
+    header{
+        height: 80vh;
+    }
+    header h1{
+        font-weight: 600;
+        font-size: 3rem;
+    }
+}
+@media (max-width:955px){
+    header h1{
+        font-weight: 600;
+        font-size: 2.5rem;
+    }
+}
+@media (max-width:700px){
+    header h1{
+        font-weight: 600;
+        font-size: 2rem;
+    }
+}
+@media (max-width:560px){
+    header{
+        height: 70vh;
+    }
+    header h1{
+        font-weight: 600;
+        font-size: 1.4rem;
+        top: 120px;
+        max-width: 300px;
+    }
+}
+
+
+/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&& blog &&&&&&&&&&&&&&&&& */
+.blog .col-12 h3 {
+    font-style: normal;
+    font-weight: 600;
+    line-height: 56px;
+    color: #171717;
+    font-size: 2.5rem;
+    width: 75%;
+}
+.blog .col-12 p{
+    width: 720px;
+}
+
+.blog .col-6{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 13px 20px;
+    width: auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.488);
+
+}
+
+.blog .col-6 h1 {
+    font-family: 'Syne';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 26px;
+    color: #171717;
+}
+.blog .col-6 a{
+    position: relative;
+    transition: color ease-in-out .2s;
+}
+.blog .col-6 a:hover{
+    color: #FFBC3E;
+}
+.blog .col-6 i.fa-solid{
+
+    position: absolute;
+    top: 1px;
+    right: -20px;
+    display: inline-block;
+    font-size: 1rem;
+}
+
+.blog .col-6 p {
+    font-family: 'Syne';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: #282828;
+}
+
+.blog .col-6 .text {
+    margin: 40px 30px 0px 30px;
+    width: 225px;
+    /* height: 250px; */
+}
+.blog .col-6 .image{
+    width: 225px;
+    height: 250px;
+}
+
+.blog .col-6 img {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+
+.blog .col-6 a {
+    display: inline-block;
+    margin: 0;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #171717;
+    text-decoration: none;
+
+}
+
+
+.blog a.seeall {
+    text-decoration: none;
+    display: inline-block;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFBC3E;
+    background: #1B1B1B;
+    width: 220px;
+    text-align: center;
+    padding: 13px 0;
+    margin-top: 60px;
+    border-radius: 2px;
+    box-shadow: 0 0 5px black;
+    height: 50px;
+    transition: color ease-in-out .2s;
+    transition: background-color ease-in-out .2s;
+
+}
+.blog a.seeall:hover{
+    color:#ffffff;
+    background-color: #FDC351;
+}
+@media (max-width : 600px){
+    .blog .col-6 {
+      width: 245px;
+    
+    }
+    .blog .col-6 .image{
+        width: 245px;
+        height: 250px;
+    }
+    .blog .col-6 .text {
+        margin: 40px 30px 0px 30px;
+        width: 225px;
+        /* height: 250px; */
+        padding: 20px 0;
+    }
+    /* .blog .col-6 img {
+        width: 200px;
+        height: 100%;
+        display: inline-block;
+    }
+    
+.blog .col-6 h1 {
+    font-family: 'Syne';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 26px;
+    color: #171717;
+}
+.blog .col-6 p {
+    font-family: 'Syne';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 17px;
+    color: #282828;
+}
+.blog .col-6 .text{
+    margin-top: 15px;
+} */
+}
+
+/* &&&&&&&&&&&&&&&&&&&&&&&& Register &&&&&&&&&&&&&&&&&&& */
+
+div.register {
+    width: 100%;
+    height: 450px;
+    background-image: url(../teacherimage/main-reg.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    margin-top: 100px;
+    overflow: hidden;
+
+}
+
+div.register .img{
+    position: absolute;
+    left: 80%;
+    top: -164px;
+}
+
+div.register h1 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 47px;
+    line-height: 56px;
+    color: #FFBC3E;
+    width: 350px;
+}
+
+div.register a {
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #171717;
+    display: inline-block;
+    text-decoration: none;
+    background: #FFBC3E;
+    padding: 10px 17px;
+    margin-top: 25px;
+    border-radius: 2px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.487);
+}
+
+@media (max-width : 991px) {
+    div.register h1 {
+        font-size: 40px;
+        width: 300px;
+    }
+
+}
+
+

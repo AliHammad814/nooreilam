@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/dashbg.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/about.js" defer></script>
+    <title>Edit</title>
+</head>
+
+<body>
+    <a class="backhome fixed-top" href="/admin/dashabout">Home</a>
+    <div class="color color-1"></div>
+    <div class="color color-2"></div>
+
+    
+    <!-- &&&&&&&&&&&&&&&&&&&&&&& learing quran -->
+
+    <div class="container fullbox">
+        <div class="row">
+            <div class="col-12">
+                <h1 id="mainheading">Learning Quran Edit</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <form action="aboutquranedit?id=<%= qurane[0]._id  %>" method="post" enctype="multipart/form-data">
+                    <label for="heading">Heading</label>
+                    <input value="<%= qurane[0].heading  %>"  type="text" name="heading" required id="heading"><br><br>
+                    <label for="paragraph">Paragraph</label>
+                    <input value="<%= qurane[0].paragraph  %>" type="text" required name="paragraph" id="paragraph"><br><br>
+                    <label for="image">Image</label>
+                    <input type="file" name="image"  id="image"><br><br>
+                    <input type="submit" value="Update">
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,391 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: Syne;
+    /* overflow-x: hidden; */
+}
+
+
+/* &&&&&&&&&&&&&&&&&&&&& header &&&&&&&&&&&&&&&&&&&&& */
+
+header {
+    background: linear-gradient(rgba(29, 141, 113, 0.87), rgba(29, 141, 113, 0.87)), url(../aboutimage/main-header.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+
+header h1 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: #FDC351;
+    line-height: 55px;
+    text-transform: capitalize;
+    position: relative;
+    width: 400px;
+}
+
+header img {
+    position: absolute;
+    right: 73%;
+    bottom: 0;
+    width: 358px;
+    height: 512px;
+    display: inline-block;
+}
+
+@media (max-width:770px) {
+    header h1.main-heading {
+        font-weight: 600;
+        font-size: 1.9rem;
+    }
+}
+
+@media (max-width:570px) {
+    header h1.main-heading {
+        font-weight: 600;
+        font-size: 1.9rem;
+        margin-left: 100px;
+        margin-left: 0%;
+    }
+
+    header {
+        height: 70vh;
+    }
+}
+
+@media (max-width:350px) {
+    header h1.main-heading {
+        font-weight: 600;
+        font-size: 1.7rem;
+        margin-left: 0;
+        margin-top: 40px;
+        text-align: left;
+    }
+
+    header {
+        height: 70vh;
+    }
+}
+
+
+/* &&&&&&&&&&&&&&&&&&&&&&&&&&& easy to learn &&&&&&&&&&&&&&&&&&&& */
+
+.easytolearn h2 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+}
+
+.easytolearn p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+    width: 95%;
+    margin-top: 50px;
+    color: #222222;
+}
+
+.easytolearn {
+    padding: 100px 0;
+}
+
+
+/* ######################### quran ####################### */
+
+.quran h2 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    margin-bottom: 60px;
+}
+
+.quran .col-5 {
+    margin: 50px 0;
+    width: 500px;
+
+}
+
+.quran .col-5 h3 {
+    font-family: 'Syne';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 122%;
+    /* or 49px */
+
+    letter-spacing: -0.015em;
+
+    color: #171717;
+
+}
+
+.quran .col-5 p {
+    font-family: 'Syne';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+
+    color: #222222;
+
+}
+
+.quran .col-5 img {
+    display: inline-block;
+    width: 270px;
+    height: 270px;
+    z-index: 999;
+    position: relative;
+
+}
+
+.quran .div-right,
+.quran .div-left {
+    position: relative;
+}
+
+.quran .div-right::before {
+    content: "";
+    display: inline-block;
+    width: 230px;
+    height: 270px;
+
+    position: absolute;
+    top: -15px;
+    left: 55px;
+    border: 3px solid #F8CB55;
+    border-radius: 4px;
+
+}
+
+.quran .div-left::before {
+    content: "";
+    display: inline-block;
+    width: 230px;
+    height: 270px;
+
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    border: 3px solid #F8CB55;
+    border-radius: 4px;
+
+}
+
+@media (max-width : 1200px) {
+    .quran .main:nth-child(2) .img {
+        order: 1;
+    }
+
+    .quran .main:nth-child(2) .text {
+        order: 2;
+    }
+}
+
+@media (max-width : 575px) {
+    .quran h2 {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 44px;
+        margin-bottom: 60px;
+    }
+
+    .quran .col-5 p {
+        font-family: 'Syne';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 26px;
+
+        color: #222222;
+
+    }
+
+    .quran .col-5 h3 {
+        font-family: 'Syne';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 29px;
+        line-height: 122%;
+        /* or 49px */
+
+        letter-spacing: -0.015em;
+
+        color: #171717;
+
+    }
+
+}
+
+
+
+
+/* &&&&&&&&&&&&&&&&&&&&&&&& Register &&&&&&&&&&&&&&&&&&& */
+
+div.register {
+    width: 100%;
+    height: 450px;
+    background-image: url(../homeimage/reg-bg.png);
+    background-size: cover;
+    background-position: left;
+    position: relative;
+    margin-top: 80px;
+    overflow: hidden;
+
+}
+
+div.register img {
+    position: absolute;
+    left: 70%;
+    top: -70px;
+}
+
+div.register h1 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 47px;
+    line-height: 56px;
+    color: #FFBC3E;
+    width: 350px;
+}
+
+div.register a {
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #171717;
+    display: inline-block;
+    text-decoration: none;
+    background: #FFBC3E;
+    padding: 10px 17px;
+    margin-top: 25px;
+    border-radius: 2px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.487);
+}
+
+@media (max-width : 991px) {
+    div.register h1 {
+        font-size: 40px;
+        width: 300px;
+    }
+
+}
+
+
+
+
+
+/* &&&&&&&&&&&&&&&  booking box &&&&&&&&&&&&&&&&&&&&&& */
+
+.booking-box img {
+    position: absolute;
+    top: -70px;
+    right: 0;
+}
+
+.booking-box {
+    /* height: 100vh; */
+    background: linear-gradient(rgba(255, 188, 62, 0.95), rgba(255, 188, 62, 0.95)), url(../img/booking-img/img-2.png);
+    text-align: center;
+    margin: 100px 0 0px 0;
+    position: relative;
+}
+
+.booking-box h1 {
+
+    font-style: normal;
+    font-weight: 500;
+    line-height: 56px;
+    color: #171717;
+    font-size: 2.5rem;
+}
+
+.booking-box p {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+}
+
+.booking-box .box input {
+    display: inline-block;
+    width: 350px;
+    height: 64px;
+    margin: 50px;
+    position: relative;
+    background-color: inherit;
+    z-index: 0;
+    margin: 0;
+    border: 1px solid rgb(0, 0, 0);
+    outline: none;
+    padding: 5px;
+    font-size: 1.3rem;
+    color: red;
+    font-weight: 500;
+}
+
+/* .booking-box .input::placeholder{
+    display: inline-block;
+    z-index: 999;
+    position: absolute;
+    top: -10px;
+    left: 0;
+    font-size: 1.1rem;
+    color: #000000;
+    font-weight: 600;
+} */
+.booking-box .box {
+    position: relative;
+    margin: 30px;
+}
+
+.booking-box label {
+    position: absolute;
+    top: -12px;
+    left: 10px;
+    background: #ffbb3eee;
+    /* background-color: none; */
+    padding: 0px 10px;
+    z-index: 9;
+    font-weight: 600;
+}
+
+.booking-box .btn {
+    background-color: #1B1B1B;
+    color: #FFBC3E;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    width: 270px;
+    height: 60px;
+    max-width: 250px;
+    min-width: 100px;
+    margin-top: 30px;
+}
+
+.booking-box .btn:hover {
+    color: white;
+}
+
+@media (max-width : 400px) {
+    .booking-box .box input {
+        width: 220px;
+        height: 55px;
+
+    }
+
+    .booking-box .btn {
+        width: 120px;
+        height: 50px;
+    }
+}

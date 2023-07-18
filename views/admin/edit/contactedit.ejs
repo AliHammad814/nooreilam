@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/dashbg.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/about.js" defer></script>
+    <title>Edit</title>
+</head>
+
+<body>
+    <a class="backhome fixed-top" href="/admin/dashcontact">Home</a>
+    <div class="color color-1"></div>
+    <div class="color color-2"></div>
+
+    
+    <div class="container fullbox">
+        <div class="row">
+            <div class="col-12">
+                <h1 id="mainheading">
+                    Contact Info Edit
+                </h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <form action="infoedit?id=<%= info[0]._id  %>" method="post">
+                    <label for="icon">Icon</label>
+                    <input value="<%= info[0].icon  %>" type="text" name="icon" id="icon"><br><br>
+                    <label for="heading">Heading</label>
+                    <input value="<%= info[0].heading  %>" type="text" name="heading" id="heading"><br><br>
+                    <label for="p">paragraph</label>
+                    <input  value="<%= info[0].paragraph  %>" type="text" name="p" id="p"><br><br>
+                    <input type="submit" value="Update">
+                </form>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

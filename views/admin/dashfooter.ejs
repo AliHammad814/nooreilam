@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/dashbg.css">
+    <link rel="stylesheet" href="css/dashfooter.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer Dashboard</title>
+</head>
+
+<body>
+    <a class="backhome fixed-top" href="/admin">Home</a>
+    <div class="color color-1"></div>
+    <div class="color color-2"></div>
+    <div class="container fullbox">
+        <div class="row">
+            <div class="col-12">
+                <h1 id="mainheading">Line 1</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <form action="line1" method="post">
+                    <label for="logo">Logo</label>
+                    <input type="text" value="Noor-e-Ilam" name="logo"><br><br>
+                    <label for="route">Route</label>
+                    <input type="text" value="home" name="route"><br><br>
+                    <label for="heading">Heading</label>
+                    <input type="text" value="Easy to learn Quran for everyone" name="heading" id="heading"><br><br>
+                    <input type="submit" value="Update">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container fullbox">
+        <div class="row">
+            <div class="col-12">
+                <h1 id="mainheading">Line 1 Icon</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <form action="newicon" method="post">
+                    <label for="icon">Icon Input</label>
+                    <input type="text" name="icon" id="icon"><br><br>
+                    <label for="route">Route</label>
+                    <input type="text" name="route" id="route"><br><br>
+                    <input type="submit" value="Add New Icon">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="line1icon" class="container">
+        <div class="row">
+            <div class="col-12">
+                <table class="table table-hover table-light">
+                    <thead>
+                        <tr>
+                            <th>Icon</th>
+                            <th>Route</th>
+                            <th>Edit</th>
+                            <th>Remove</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%for(let i=0 ; i<line1icon.length ; i++) {%>
+                            <tr>
+                                <td><i class=" <%= line1icon[i].icon %> "></i></td>
+                                <td><%= line1icon[i].route %></i></td>
+                                <td><a href="footeredit?id=<%=line1icon[i]._id%>">Edit</a></td>
+                                <td><a href="line1iconremove?id=<%=line1icon[i]._id%>">Remove</a></td>
+                            </tr>
+                            <%}%>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- &&&&&&&&&&&&&&&&&&& line 2 &&&&&&&&&&&&&&&&&&&& -->
+
+    <div class="container fullbox">
+        <div class="row">
+            <div class="col-12">
+                <h1 id="mainheading">Line 2</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <form action="line2" method="post">
+                    <label for="itemname">Item Name</label>
+                    <input type="text" value="" name="itemname" id="itemname"><br><br>
+                    <label for="route">Route</label>
+                    <input type="text" name="route" id="route"><br><br>
+                    <input type="submit" value="Add New">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="line2" class="container">
+        <div class="row">
+            <div class="col-12">
+                <table class="table table-hover table-light">
+                    <thead>
+                        <tr>
+                            <th>Item Name</th>
+                            <th>Route</th>
+                            <th>Edit</th>
+                            <th>Remove</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%for(let i=0 ; i<line2.length ; i++) {%>
+                            <tr>
+                                <td>
+                                    <%= line2[i].item %>
+                                </td>
+                                <td>
+                                    <%= line2[i].route %>
+                                </td>
+                                <td><a href="footeredit?id=<%=line2[i]._id%>">Edit</a></td>
+                                <td><a href="line2remove?id=<%=line2[i]._id%>">Remove</a></td>
+                            </tr>
+                            <%}%>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- ********************* line 3 ******************8 -->
+
+    <div class="container fullbox">
+        <div class="row">
+            <div class="col-12">
+                <h1 id="mainheading">Line 3</h1>
+            </div>
+        </div>
+        <div  class="row">
+            <div class="col-12">
+                <form action="line3" method="post">
+                    <label for="icon">Icon Input</label>
+                    <input type="text" name="icon" id="icon1"><br><br>
+                    <label for="heading">Item Name</label>
+                    <input type="text" name="heading" id="heading"><br><br>
+                    <label for="href">Href Value</label>
+                    <input type="text" name="href" id="href"><br><br>
+                    <input   type="submit" value="Add New">
+                </form>
+            </div id="line3">
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <table class="table table-hover table-light">
+                    <thead>
+                        <tr>
+                            <th>Icon</th>
+                            <th>Item</th>
+                            <th>href</th>
+                            <th>Edit</th>
+                            <th>Remove</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%for(let i=0 ; i<line3.length ; i++) {%>
+                            <tr>
+                                <td><i class=" <%= line3[i].icon %> "></i></td>
+                                <td>
+                                    <%= line3[i].heading %>
+                                </td>
+                                <td>
+                                    <%= line3[i].href %>
+                                </td>
+                                <td><a href="footeredit?id=<%=line3[i]._id%>">Edit</a></td>
+                                <td><a href="line3remove?id=<%=line3[i]._id%>">Remove</a></td>
+                            </tr>
+                            <%}%>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- &&&&&&&&&&&&&&&&&&& line 4 &&&&&&&&&&&&&&&&&&&&&&&&& -->
+
+    <div class="container fullbox">
+        <div class="row">
+            <div class="col-12">
+                <h1 id="mainheading">Line 4</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <form action="line4" method="post">
+                    <label for="itemname">Item Name</label>
+                    <input type="text" value="" name="itemname" id="itemname"><br><br>
+                    <label for="route">Route</label>
+                    <input type="text" name="route" id="route"><br><br>
+                    <input type="submit" value="Add New">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="line4" class="container">
+        <div class="row">
+            <div class="col-12">
+                <table class="table table-hover table-light">
+                    <thead>
+                        <tr>
+                            <th>Item Name</th>
+                            <th>Route</th>
+                            <th>Edit</th>
+                            <th>Remove</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%for(let i=0 ; i<line4.length ; i++) {%>
+                            <tr>
+                                <td>
+                                    <%= line4[i].item %>
+                                </td>
+                                <td>
+                                    <%= line4[i].route %>
+                                </td>
+                                <td><a href="footeredit?id=<%=line4[i]._id%>">Edit</a></td>
+                                <td><a href="line4remove?id=<%=line4[i]._id%>">Remove</a></td>
+                            </tr>
+                            <%}%>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

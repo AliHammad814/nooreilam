@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/nav.js" defer></script>
+    <title>Blog</title>
+</head>
+<body>
+    <%-  include('../layout/nav.ejs')   -%>
+
+    <!-- &&&&&&&&&&&&&&&&& header &&&&&&&&&&&&&&& -->
+
+
+    <header>
+        <div class="container ">
+            <div class="row w-100">
+                <div class="col-12 text-center w-100 d-flex justify-content-center align-content-center">
+                    <h1 class="main-heading text-start">
+                      <%= header[0].mainheading %>
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+      <!-- &&&&&&&&&&&&&&&&&&&&&&&&& blog &&&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+      <div class="container blog mb-5">
+        <div class="row ">
+            <div class="col-12 mt-5 pt-3">
+                <h3 class="mt-5 pt-5"><%= section2[0].heading  %></h3>
+            </div>
+            <div class="col-12 my-5 pb-5">
+               <p><%= section2[0].paragraph  %></p>
+            </div>
+        </div>
+        <div class="row justify-content-around  w-100">
+            <%for(let i=0 ; i<blog.length ; i++) {%>
+                <div class="col-6">
+                    <div class="image"><img src="image/<%= blog[i].image %> " alt="<%= blog[i].image %>"></div>
+                    <div class="text">
+                        <h1><%=blog[i].heading%></h1>
+                        <p><%=blog[i].paragraph%></p>
+                        <a class="" href="">Explore More <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <%}%>
+        </div>
+    </div>
+
+    <!-- &&&&&&&&&&&&&&&&&&&&&&&&&&&&&& Register &&&&&&&&&&&&&&&&&&&&&& -->
+
+    <div class="register">
+        <img class="img img-1 off" src="/teacherimage/img-1.png" alt="">
+        <img class="img img-2 off" src="/teacherimage/img-2.png" alt="">
+        <img class="img img-3 off" src="/teacherimage/img-3.png" alt="">
+        <div class="container h-100 ">
+            <div class="row h-100 align-content-center">
+                <div class="col-12">
+                    <h1><%= reg[0].heading  %></h1>
+                    <a class="gbtn" href="<%= reg[0].route  %>"><%= reg[0].btn  %></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <%-  include('../layout/footer.ejs')   -%>
+</body>
+</html>

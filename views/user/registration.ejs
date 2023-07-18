@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/registration.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/nav.js" defer></script>
+    <title>Registration</title>
+</head>
+<body>
+    <%-  include('../layout/nav.ejs')   -%>
+
+        <!-- &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& header &&&&&&&&&&&&&&&&&&&&&&&&& -->
+
+    <header>
+        <img src="/regimage/header-1.png" alt="">
+        <div class="container ">
+            <div class="row w-100">
+                <div class="col-12 text-center w-100 d-flex justify-content-center align-content-center flex-column ">
+                    <h1 class="main-heading ">
+                        <%= header1[0].heading  %>
+                    </h1>
+                    <a href="#reg">Register Now!</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$4 form $$$$$$$$$$$$$$$$$$$$$$$$ -->
+<div class="container info">
+    <div class="row">
+        <div class="col-12">
+           <h3> <%= header2[0].paragraph  %> </h3>
+        </div>
+    </div>
+</div>
+
+
+<!-- %%%%%%%%%%%%%%%%%%%% booking %%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+<div class="booking-box" id="reg">
+    <div class="container">
+        <div class="row d-flex justify-content-center align-content-center">
+            <div class="col-12 my-3">
+                <h1>fill the form below to avail this course</h1>
+            </div>
+            <div class="col-7 mb-4">
+                <p>Kindly submit the form below for a Free Trial Class to have a glimpse of the experience at our Academy</p>
+            </div>
+            <div class="col-9">
+                <div class="input-box">
+                    <form action="regformdata" class="d-flex flex-wrap justify-content-center" method="post">
+
+                        <div class="box-1 box">
+                            <label for="fullname">Full Name:</label>
+                            <input type="text" name="fullname" id="fullname" required>
+                        </div>
+                        <div class="box-2 box">
+                            <label for="email">Email:</label>
+                            <input type="email" name="email" id="email" required>
+                        </div>
+                        <div class="box-3 box">
+                            <label for="number">Phone No:</label>
+                            <input type="number" name="number" id="number" required>
+                        </div>
+                        <div class="box-4 box">
+                            <label for="course">Courses:</label>
+                            <select name="course" required>
+                                <option value=""></option>
+                                <option value="Memorization">Memorization</option>
+                                <option value="Recitation">Recitation</option>
+                                <option value="Ijaazah">Ijaazah</option>
+                                <option value="Arabic Language">Arabic Language</option>
+                            </select>
+                        </div><br>
+                        <div class="box-5 box">
+                            <label for="requirement">Requirements:</label>
+                            <input type="text" name="requirement" id="requirement">
+                        </div><br>
+                        <div class="col-12"><input type="submit" class="btn" value="Send"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <%-  include('../layout/footer.ejs')   -%>
+</body>
+</html>

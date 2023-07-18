@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/navdash.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Dashboard</title>
+</head>
+
+<body>
+        <a class="backhome fixed-top" href="/admin">Home</a>
+        <div class="color color-1"></div>
+        <div class="color color-2"></div>
+        <div class="color color-3"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="mainheading">#Navbar#</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <form action="addpage" method="post">
+                        <div>
+                            <label for="page">Page Name:</label>
+                            <input type="text" name="page" id="page" required>
+                        </div>
+                        <br><br>
+                        <div>
+                            <label for="route">Route Name:</label>
+                            <input type="text" name="route" id="route" required>
+                        </div>
+                        <br><br>
+                        <input type="submit" value="Add New Page"> <br><br>
+                    </form>
+                </div>
+            </div>
+            <div class="row pagerow">
+                <%for(let i=0 ; i<pages.length ; i++) {%>
+                    <div class="col-2">
+                    <%=pages[i].page%>
+                    <a href="remove?id=<%=pages[i]._id%>">X</a>
+                </div>
+            <%}%>
+            </div>
+        </div>
+
+</body>
+
+</html>

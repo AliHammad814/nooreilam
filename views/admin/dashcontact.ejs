@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/dashbg.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Dashboard</title>
+</head>
+
+<body>
+    <a class="backhome fixed-top" href="/admin">Home</a>
+    <div class="color color-1"></div>
+    <div class="color color-2"></div>
+    <div class="container fullbox">
+        <div class="row">
+            <div class="col-12">
+                <h1 id="mainheading">
+                    Header
+                </h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <form action="headercontactdata" method="post">
+                    <label for="mainheading">Heading</label>
+                    <input type="text" name="mainheading" placeholder="Main Heading"
+                        value="Quran Tuition Classes With Best Tutors"><br><br>
+                    <input type="submit" value="UpDate">
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- &&&&&&&&&&&&&&&&&&& teacher %%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+    <div class="container fullbox">
+        <div class="row">
+            <div class="col-12">
+                <h1 id="mainheading">Looking For Tutor</h1>
+            </div>
+        </div>
+        <div id="tutor" class="row">
+            <div class="col-12">
+                <form action="contactp" method="post">
+                    <label for="heading">Heading</label>
+                    <input type="text" name="heading" id="heading"><br><br>
+                    <label for="paragraph">Paragraph</label>
+                    <input type="text" name="paragraph" id="paragraph"><br><br>
+                    <input type="submit" value="Update">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- &&&&&&&&&&&&&&&&&&&&&&&& Contact Info.&&&&&&&&&&&&&&&&&&&&& -->
+
+    <div class="container fullbox">
+        <div class="row">
+            <div class="col-12">
+                <h1 id="mainheading">
+                    Contact Info
+                </h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <form action="info" method="post">
+                    <label for="icon">Icon</label>
+                    <input type="text" name="icon" id="icon"><br><br>
+                    <label for="heading">Heading</label>
+                    <input type="text" name="heading" id="heading"><br><br>
+                    <label for="p">paragraph</label>
+                    <input type="text" name="p" id="p"><br><br>
+                    <input type="submit" value="Add New">
+                </form>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div id="info" class="container info mb-5 pb-5">
+        <div class="row d-flex justify-content-around flex-wrap">
+            <%for(let i = 0 ; i<info.length ; i++) {%>
+            <div id="rlt" class="col-5 left mb-5">
+                <a id="link" href="inforemove?id=<%=info[i]._id%>">Remove</a>
+                <a id="edit" href="contactedit?id=<%=info[i]._id%>">Edit</a>
+                <i class= " icon me-3 <%= info[i].icon %> "></i>
+                <h3><%= info[i].heading  %></h3>
+                <p><%= info[i].paragraph  %></p>
+            </div>
+            <%}%>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

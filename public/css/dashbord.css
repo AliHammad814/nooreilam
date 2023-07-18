@@ -1,0 +1,239 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+header{
+    display: flex;
+    /* background-color: rgb(4, 4, 33); */
+    background: url('../dashbord/reg-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+a#admin {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: red;
+    color: white;
+    font-weight: 600;
+    padding: 5px 15px;
+    font-size: 1.2rem;
+    border-bottom-left-radius: 10px;
+    transition: .5s;
+    text-decoration: none;
+}
+a#admin:hover {
+    background-color: white;
+    color: red;
+}
+a#logout {
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    background-color: red;
+    color: white;
+    font-weight: 600;
+    padding: 5px 10px;
+    font-size: 1.2rem;
+    border-bottom-left-radius: 10px;
+    transition: .5s;
+    text-decoration: none;
+}
+a#logout:hover {
+    background-color: white;
+    color: red;
+}
+
+/* &&&&&&&&&&&&&&&&&&&&&&&& nav &&&&&&&&&&&&&&&&&&&&&&&&& */
+
+div.side-nav{
+    /* background: url('../dashbord/reg-bg.png'); */
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    padding: 20px 0;
+    
+}
+
+.side-nav table a{
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: rgb(255, 255, 255);
+    padding: 15px 0px;
+    width: 200px;
+    
+    margin: 10px;
+    text-align: center;
+    border-radius: 30px;
+    box-shadow: 2px 2px 5px rgb(214, 214, 214);
+    transition: background ease-in-out .3s;
+}
+.side-nav table a:hover{
+    background-color: red;
+    color: aliceblue;
+    box-shadow: 2px 2px 15px rgb(243, 243, 243);
+}
+
+.side-nav span{
+    background-color: rgb(255, 255, 255);
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.side-nav h1{
+    color: rgb(255, 0, 0);
+    font-weight: bolder;
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%5 */
+div.left{
+    display: flex;
+    flex-direction: column;
+}
+
+.maindiv{
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ justify-content: space-around;
+ align-content: flex-start;
+ overflow-x: hidden;
+}
+.maindiv .mainheading{
+    margin: 15px;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+    /* background: url("../dashbord/reg-bg.png"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgb(255, 0, 0);
+    font-weight: bold;
+}
+.maindiv div{
+    width: 300px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    /* border: solid rgb(166, 165, 165) 2px; */
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px 5px rgb(224, 224, 224);
+}
+.maindiv div h1{
+    font-size: 1.5rem;
+    font-weight:600;
+    color: white;
+}
+.maindiv div span{
+    display: inline-block;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: white;
+}
+.maindiv .home{
+    background:  url(../homeimage/backgroun\ image.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.maindiv .about{
+    background:  url(../aboutimage/main-header.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.maindiv .course{
+    background-image: url(../courseimage/reg-header.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.maindiv .teacher{
+    background-image: url(../teacherimage/main-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.maindiv .blog{
+    background-image: url(../blogimage/header.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.maindiv .contact{
+    background-image: url(../contactus/header.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.maindiv .reg{
+    background-image: url(../regimage/header.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+}
+.maindiv .reg img {
+    position: absolute;
+    top: 0px;
+    width: 300px;
+    height: 170px;
+}
+
+.formdiv div a{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: rgb(144, 144, 144);
+    border-top: solid white 2px;
+    border-bottom: solid white 2px;
+    transition: .5s;
+}
+.formdiv div a:hover{
+    background-color: red;
+}
+
+.formdiv div.one{
+   background: url(../formimage/img-1.png);
+}
+.formdiv div.two{
+   background: url(../formimage/img-2.png);
+}
+.formdiv div.three{
+   background: url(../formimage/img-3.png);
+}
+
+@media (max-width : 585px) {
+    header{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media (max-width : 350px) {
+    .maindiv div{
+        width: 200px;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        /* border: solid rgb(166, 165, 165) 2px; */
+        margin: 20px;
+        border-radius: 20px;
+        box-shadow: 0px 0px 5px 5px rgb(224, 224, 224);
+    }
+}
